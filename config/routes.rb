@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
+  # App root
   root 'appointments#index'
 
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+# Routes to all 7 CRUD actions for appointments
+  resources :appointments
 end
