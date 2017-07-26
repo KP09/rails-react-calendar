@@ -1,0 +1,6 @@
+<h3>All appointments</h3>
+
+<% @appointments.each do |a| %>
+  <h4><%= a.title %></h4>
+  <p><%= a.appointment_time %></p>
+<% end %>
