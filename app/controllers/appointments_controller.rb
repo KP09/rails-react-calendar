@@ -1,7 +1,7 @@
 class AppointmentsController < ApplicationController
   def index
     @appointment = Appointment.new
-    @appointments = Appointment.order('created_at DESC')
+    @appointments = Appointment.order('appointment_time ASC')
   end
 
   def create
