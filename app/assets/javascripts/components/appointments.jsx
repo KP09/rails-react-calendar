@@ -4,7 +4,7 @@ class Appointments extends React.Component {
     this.state = {
       appointments: this.props.appointments,
       title: 'Your title here',
-      appointment_time: 'Tomorrow at 9am'
+      appointment_time: 'Select a date and time'
     }
     this.handleUserInput = this.handleUserInput.bind(this);
     this.handleFormSubmission = this.handleFormSubmission.bind(this);
@@ -44,8 +44,8 @@ class Appointments extends React.Component {
     return (
       <div>
         <AppointmentForm
-          input_title={this.state.input_title}
-          input_appointment_time={this.state.input_appointment_time}
+          title={this.state.title}
+          appointment_time={this.state.appointment_time}
           onUserInput={this.handleUserInput}
           onFormSubmission={this.handleFormSubmission}
         />
