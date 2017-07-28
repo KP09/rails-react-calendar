@@ -1,4 +1,17 @@
-class Appointments extends React.Component {
+// Standard React imports
+import React from 'react'
+import ReactDOM from 'react-dom'
+
+// Additional packages
+import update from 'immutability-helper'
+
+// Imported classes
+import AppointmentForm from './appointment_form'
+
+// Imported named constants
+import { AppointmentsList } from './appointments_list'
+
+export default class Appointments extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -34,7 +47,7 @@ class Appointments extends React.Component {
   }
 
   addNewAppointment(appointment) {
-    const appointments = React.addons.update(this.state.appointments, {$push: [appointment]});
+    const appointments = update(this.state.appointments, {$push: [appointment]});
     this.setState({appointments: appointments.sort(function(a,b){
       return new Date(a.appointment_time) - new Date(b.appointment_time);
     })})

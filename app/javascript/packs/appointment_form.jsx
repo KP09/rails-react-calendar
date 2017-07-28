@@ -1,4 +1,7 @@
-class AppointmentForm extends React.Component {
+import React from 'react'
+import Datetime from 'react-datetime'
+
+export default class AppointmentForm extends React.Component {
   handleChange(e) {
     const name = e.target.name;
     const obj = {};
